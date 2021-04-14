@@ -10,7 +10,7 @@ RUN dpkg --add-architecture i386 && apt-get update && \
 RUN curl https://dl.winehq.org/wine-builds/winehq.key | apt-key add -
 RUN echo 'deb https://dl.winehq.org/wine-builds/ubuntu/ focal main' |tee /etc/apt/sources.list.d/winehq.list
 RUN apt-get update && apt-get -y install winehq-stable winetricks
-RUN apt-get -y full-upgrade && apt-get clean && rm -rf /var/lib/apt/lists/*
+RUN apt-get -y full-upgrade && apt-get clean
 
 WORKDIR /usr/scr/app
 COPY ./Simulation/ .
