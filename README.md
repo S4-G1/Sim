@@ -6,7 +6,7 @@
 * 4840 - **UPC-UA**
 
 ### Running the beer simulator
-`$ docker-compose up`
+`$ docker-compose up --force-recreate`
 
 Open your browser [localhost:81/index.html?visuId=visu](http://localhost:81/index.html?visuId=visu)
 
